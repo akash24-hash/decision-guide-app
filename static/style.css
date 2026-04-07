@@ -1,0 +1,118 @@
+
+
+body{
+    background:#0a0f1c;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+}
+
+/* Heading */
+h1{
+    color:#ff6b00;
+    margin-top:30px;
+}
+
+/* Card */
+.container{
+    background:#151a2e;
+    padding:25px;
+    width:320px;
+    margin:60px auto;
+    border-radius:12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* Input */
+input{
+    width:90%;
+    padding:10px;
+    margin:10px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+}
+
+/* Buttons (LIGHT BLUE THEME) */
+button{
+    padding:10px 15px;
+    margin:8px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+
+    background:#3b82f6;   /* light blue */
+    color:white;
+}
+
+/* Hover */
+button:hover{
+    transform:scale(1.05);
+    background:#60a5fa;   /* lighter blue */
+}
+
+/* Yes */
+button[onclick="answer(5)"]{
+    background:#3b82f6;
+}
+
+/* Maybe */
+button[onclick="answer(3)"]{
+    background:#38bdf8;  /* sky blue */
+}
+
+/* No */
+button[onclick="answer(1)"]{
+    background:#1e40af;  /* dark blue */
+}
+
+/* Start button */
+button:nth-of-type(1){
+    background:#2563eb;
+}
+
+/* History button */
+button:last-of-type{
+    background:#0ea5e9;
+}
+
+/* Question */
+#question{
+    margin-top:10px;
+    font-size:16px;
+}
+
+/* Result */
+#result{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* History page */
+.history-container{
+    width:90%;
+    margin:40px auto;
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#3b82f6;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    background:#1f2540;
+}
+
+tr:hover td{
+    background:#2a2f55;
+}

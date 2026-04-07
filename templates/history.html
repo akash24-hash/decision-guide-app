@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>📊 Decision History</h1>
+
+<div class="history-container">
+
+    <table id="table">
+        <tr>
+            <th>Decision</th>
+            <th>Confidence</th>
+            <th>Time</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+
+    <br>
+    <a href="/">← Back</a>
+
+</div>
+
+<script>
+fetch("/history")
+.then(res => res.json())
+.then(data => {
+    let table = document.getElementById("table");
+
+    data.forEach(item => {
+        let row = table.insertRow();
+
+        row.innerHTML = `
+            <td>${item.decision}</td>
+            <td>${item.confidence.toFixed(2)}%</td>
+            <td>${new Date(item.created_at).toLocaleString()}</td>
+            <td><button onclick="del(${item.id})">Delete</button></td>
+        `;
+    });
+});
+
+function del(id){
+    fetch("/delete/"+id,{method:"DELETE"})
+    .then(()=>location.reload());
+}
+</script>
+
+</body>
+</html>

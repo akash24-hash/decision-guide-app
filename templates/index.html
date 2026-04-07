@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decision Guide</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🧠 Decision Guide</h1>
+
+<div class="container">
+
+    <input type="text" id="decision" placeholder="e.g. Should I go to gym today?">
+
+    <button onclick="start()">Start</button>
+
+    <div id="questionBox" style="display:none;">
+        <p id="question"></p>
+
+        <button onclick="answer(5)">Yes</button>
+        <button onclick="answer(3)">Maybe</button>
+        <button onclick="answer(1)">No</button>
+    </div>
+
+    <h2 id="result"></h2>
+
+    <button onclick="openHistory()">View History</button>
+
+</div>
+
+<!-- <script src="/static/script.js"></script> -->
+
+<script src="/static/script.js"></script>
+</body>
+</html>
